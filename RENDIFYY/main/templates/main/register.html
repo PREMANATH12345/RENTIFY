@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+
+    <style>
+           h1{
+            color: #8739f9;
+            text-align: center;
+        }
+        form
+{
+    align-content: center;
+    margin: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: azure;
+}        
+form label{
+    padding: 10px;
+    width: 50%;
+    align-items: right;
+}
+form input{
+    width: 50%;
+}
+button{
+    text-decoration: none;
+            background-color: #37b9f1;
+            border-radius: 5px;
+            padding: 7px;
+            color: white;
+}
+button:hover{
+    background-color: #267191;
+
+}
+    </style>
+</head>
+<body>
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

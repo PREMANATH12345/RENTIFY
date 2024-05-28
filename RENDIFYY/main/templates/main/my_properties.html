@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Properties</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+
+</head>
+<body>
+    <h2>My Properties</h2>
+    <ul>
+        {% for property in properties %}
+            <li>{{ property.title }} - {{ property.location }} - <a href="{% url 'property_detail' property.pk %}">View</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

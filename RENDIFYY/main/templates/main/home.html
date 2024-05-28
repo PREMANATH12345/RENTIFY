@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rentify - Home</title>
+    <style>
+        
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f5;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+}
+
+nav ul li {
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    background-color: #37b9f1;
+    height: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+nav ul li:hover {
+    text-decoration: none;
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #8739f9;
+    text-align: center;
+}
+p{
+    color: #0b0b0c;
+    text-align: center; 
+}
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to RENTIFY</h1>
+    <p>Find or post rental properties easily.</p>
+    <nav>
+        <ul>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'post_property' %}">Post Property</a></li>
+            <li><a href="{% url 'property_list' %}">View Properties</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

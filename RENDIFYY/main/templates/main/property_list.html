@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property List</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f5;
+    margin: 0;
+    padding: 0;
+}
+        h1{
+            color: #8739f9;
+            text-align: center;
+        }
+       
+        ol li{
+            height: 30px;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        ol li a{
+            text-decoration: none;
+            background-color: #37b9f1;
+            border-radius: 5px;
+            padding: 7px;
+            color: white;
+        }
+        ol li a:hover{
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Property List</h1>
+    <ol>
+        {% for property in properties %}
+            <li>{{ property.title }}    - {{ property.location }}    - <a href="{% url 'property_detail' property.pk %}">View</a></li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
